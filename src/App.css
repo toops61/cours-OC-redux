@@ -1,3 +1,12 @@
+@keyframes flashing-text {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .App {
   width: 100vw;
   min-height: 100vh;
@@ -12,10 +21,11 @@ button {
   height: 5rem;
   background-color: black;
   color: white;
-  border: solid .1rem;
   padding: .5rem 1rem;
   margin: 1rem 2rem;
   font-size: 2rem;
+  border: solid white;
+  box-shadow: 8px 8px 20px black;
 }
 
 main {
@@ -31,15 +41,43 @@ main {
   align-items: center;
 }
 
-.score-container {
-  border: solid white;
+.score-container, .sets-container, .jeu-player {
+  width: 50rem;
   padding: 1rem 3rem;
   font-size: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: solid white;
+  margin-bottom: 1rem;
+  background-color: rgb(0, 128, 214);
+}
+
+.jeu-player {
+  background-color: rgb(176, 14, 14);
+  font-size: 2rem;
+  justify-content: space-between;
+}
+
+.sets-container {
+  background-color: rgb(176, 14, 14);
+  font-size: 2.5rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.sets-container p {
+  margin: 0 2rem;
 }
 
 h1 {
   font-size: 6rem;
   margin: 4rem auto;
+}
+
+h2 {
+  font-size: 4rem;
+  text-align: center;
 }
 
 .buttons-container {
@@ -48,5 +86,21 @@ h1 {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  margin-top: 3rem;
+  margin-top: 1rem;
+}
+
+.winner {
+  border: solid white;
+  padding: 1rem 2rem;
+  margin-bottom: 2rem;
+  background-color: rgb(0, 128, 214);
+}
+
+.winner p {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.flashing {
+  animation: flashing-text 800ms infinite alternate;
 }

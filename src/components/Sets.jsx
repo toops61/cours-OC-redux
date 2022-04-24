@@ -2,10 +2,12 @@ import { useSelector } from "react-redux"
 
 export default function Sets() {
     
-    const setsArray = useSelector(state => state.score.sets);
+    const array = useSelector(state => state.score.sets);
     //const score = useSelector(state => state.score);
+    const setsArray = [...array];
 
     const Set = (props) => {
+        
         return <p>{props.children}</p>
     }
 

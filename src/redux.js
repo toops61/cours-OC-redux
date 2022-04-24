@@ -64,6 +64,7 @@ const scoreSlice = createSlice({
             }
 
             const calculateSet = () => {
+                //console.log('calculateSet');
                 const setArray = [...state.sets];
                 const set = state.jeuPlayer1 + ' - ' + state.jeuPlayer2;
                 let player1set = state.setPlayer1;
